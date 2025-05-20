@@ -1,11 +1,11 @@
 <pre class='metadata'>
 Title: Writing Effective Explainers
-Shortname: explainers
+Shortname: explainer-explainer
 Level: none
 Status: NOTE-ED
 Group: tag
-Repository: w3ctag/explainers
-URL: https://w3ctag.github.io/explainers/
+Repository: w3ctag/explainer-explainer
+URL: https://w3ctag.github.io/explainer-explainer/
 Editor: Jeffrey Yasskin, w3cid 72192, Google https://google.com, jyasskin@google.com
 Complain About: accidental-2119 yes, missing-example-ids yes
 Markup Shorthands: markdown yes, css no
@@ -16,9 +16,9 @@ Required IDs: describe-proposal, alt-text, alternatives, history, template
 Abstract: An explainer introduces a problem that a group of people are trying to solve,
 	and helps everyone with an interest in the target problem find consensus on a good way to solve it.
 
-!Participate: [Github repository](https://github.com/w3ctag/explainers)
-!Participate: [Issues](https://github.com/w3ctag/explainers/issues)
-!Explainer Template: [https://github.com/w3ctag/explainers/blob/main/template.md](https://github.com/w3ctag/explainers/blob/main/template.md)
+!Participate: [Github repository](https://github.com/w3ctag/explainer-explainer)
+!Participate: [Issues](https://github.com/w3ctag/explainer-explainer/issues)
+!Explainer Template: [https://github.com/w3ctag/explainer-explainer/blob/main/template.md](https://github.com/w3ctag/explainer-explainer/blob/main/template.md)
 Metadata Include: Issue Tracking no
 Metadata Order: !*, *
 </pre>
@@ -150,7 +150,7 @@ By following these guidelines, you can create clear, concise, and accessible exp
 # Appendix A: Markdown Template # {#template}
 
 See this rendered at
-[https://github.com/w3ctag/explainers/blob/main/template.md](https://github.com/w3ctag/explainers/blob/main/template.md).
+[https://github.com/w3ctag/explainer-explainer/blob/main/template.md](https://github.com/w3ctag/explainer-explainer/blob/main/template.md).
 
 <pre class=include-code>
 path: template.md
