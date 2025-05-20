@@ -12,7 +12,7 @@ Markup Shorthands: markdown yes, css no
 Assume Explicit For: yes
 Boilerplate: conformance no
 Required IDs: introduction, good-explainers, tips, end-user-need, write-simply
-Required IDs: describe-proposal, alt-text, alternatives, history, template
+Required IDs: describe-proposal, alt-text, alternatives, history, deep-linking, template
 Abstract: An explainer introduces a problem that a group of people are trying to solve,
 	and helps everyone with an interest in the target problem find consensus on a good way to solve it.
 
