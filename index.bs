@@ -140,8 +140,8 @@ You undoubtedly had reasons not to choose those alternatives, but reviewers and 
 Many important end-user problems have a history of failed and incomplete attempts to solve them.
 Look for and draw on those ideas when developing and explaining your own proposal.
 Link to all prior art in either
-your [considered alternatives](https://github.com/w3ctag/tag.w3.org/blob/main/explainers/template.md#considered-alternatives) section
-or your [references and acknowledgements](https://github.com/w3ctag/tag.w3.org/blob/main/explainers/template.md#references--acknowledgements).
+your [alternatives considered](https://github.com/w3ctag/explainer-explainer/blob/main/template.md#alternatives-considered) section
+or your [references and acknowledgements](https://github.com/w3ctag/explainer-explainer/blob/main/template.md#references--acknowledgements).
 
 ## Enable Easy Deep Linking ## {#deep-linking}
 
