@@ -12,7 +12,7 @@ Markup Shorthands: markdown yes, css no
 Assume Explicit For: yes
 Boilerplate: conformance no
 Required IDs: introduction, good-explainers, tips, end-user-need, write-simply
-Required IDs: describe-proposal, alt-text, alternatives, history, template
+Required IDs: describe-proposal, alt-text, alternatives, history, deep-linking, template
 Abstract: An explainer introduces a problem that a group of people are trying to solve,
 	and helps everyone with an interest in the target problem find consensus on a good way to solve it.
 
@@ -142,6 +142,15 @@ Look for and draw on those ideas when developing and explaining your own proposa
 Link to all prior art in either
 your [considered alternatives](https://github.com/w3ctag/tag.w3.org/blob/main/explainers/template.md#considered-alternatives) section
 or your [references and acknowledgements](https://github.com/w3ctag/tag.w3.org/blob/main/explainers/template.md#references--acknowledgements).
+
+## Enable Easy Deep Linking ## {#deep-linking}
+
+You should host your explainer as HTML at a stable, readable URL,
+ideally next to where the specification is expected to land.
+Use a format
+that makes it easy for reviewers to link directly to sections inside the document,
+like Markdown or HTML.
+It's fine to use a host like GitHub that automatically renders Markdown.
 
 ----
 
