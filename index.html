@@ -5,10 +5,10 @@
   <title>Writing Effective Explainers</title>
   <meta content="NOTE-ED" name="w3c-status">
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED" rel="stylesheet">
-  <meta content="Bikeshed version c67c745b1, updated Fri Jan 17 14:27:28 2025 -0800" name="generator">
+  <meta content="Bikeshed version 9a7a6709a, updated Tue May 27 16:45:34 2025 -0700" name="generator">
   <link href="https://w3ctag.github.io/explainers/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="450c15052a889a181e6469a7845c8037b9276c40" name="revision">
+  <meta content="fbe4f1dc4d5440d7ae0b9258f87a17f4833555f4" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -534,7 +534,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">Writing Effective Explainers</h1>
-   <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>, <time class="dt-updated" datetime="2025-01-30">30 January 2025</time></p>
+   <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>, <time class="dt-updated" datetime="2025-05-28">28 May 2025</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -565,14 +565,18 @@ and helps everyone with an interest in the target problem find consensus on a go
    <p> <em>This section describes the status of this document at the time of its
     publication. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the
     latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web
-    Consortium">W3C</abbr> technical reports index</a>.</em> </p>
-   <p> This document was published by the <a href="https://www.w3.org/2001/tag/">W3C Technical Architecture Group
-    (TAG)</a> as an Editor’s Draft.
-    Publication as an Editor’s Draft does not imply endorsement by <abbr title="World Wide Web Consortium">W3C</abbr> and its Members. This is a
-    draft document and may be updated, replaced or obsoleted by other documents
-    at any time. It is inappropriate to cite this document as other than work in
-    progress. </p>
-   <p> Feedback and comments on this specification are welcome. Please <a href="https://github.com/w3ctag/explainers/issues">file an issue</a> in this document’s <a href="https://github.com/w3ctag/explainers/">GitHub repository</a>. </p>
+    Consortium">W3C</abbr> standards and drafts index</a> at https://www.w3.org/TR/.</em> </p>
+   <p> This document was published by the <a href="https://www.w3.org/groups/other/tag/">Technical Architecture Group</a> as an Editor’s Draft intended for the Note track.
+    This is a draft document and
+    may be updated, replaced or obsoleted by other documents at any time.
+    It is inappropriate to cite this document as other than work in progress.
+    Editor’s Drafts are not endorsed by <abbr title="World Wide Web
+    Consortium">W3C</abbr> nor its Members. </p>
+   <p></p>
+   <p> Feedback and comments on this document are welcome. Please <a href="https://github.com/w3ctag/explainers/issues">file an issue</a> in this document’s <a href="https://github.com/w3ctag/explainers/">GitHub repository</a>. </p>
+   <p data-deliverer="34270"> The <a href="https://www.w3.org/policies/patent-policy/"><abbr title="World
+    Wide Web Consortium">W3C</abbr> Patent Policy</a> does not carry any
+    licensing requirements or commitments on this document. </p>
    <p> This document is governed by the <a href="https://www.w3.org/policies/process/20231103/" id="w3c_process_revision">03 November 2023 W3C
     Process Document</a>. </p>
   </div>
@@ -590,6 +594,7 @@ and helps everyone with an interest in the target problem find consensus on a go
       <li><a href="#describe-proposal"><span class="secno">3.3</span> <span class="content">Describe Your Proposal Clearly</span></a>
       <li><a href="#alternatives"><span class="secno">3.4</span> <span class="content">Show the Alternatives That You Considered</span></a>
       <li><a href="#history"><span class="secno">3.5</span> <span class="content">Connect to History</span></a>
+      <li><a href="#deep-linking"><span class="secno">3.6</span> <span class="content">Enable Easy Deep Linking</span></a>
      </ol>
     <li><a href="#template"><span class="secno"></span> <span class="content">Appendix A: Markdown Template</span></a>
    </ol>
@@ -708,6 +713,13 @@ Look for and draw on those ideas when developing and explaining your own proposa
 Link to all prior art in either
 your <a href="https://github.com/w3ctag/tag.w3.org/blob/main/explainers/template.md#considered-alternatives">considered alternatives</a> section
 or your <a href="https://github.com/w3ctag/tag.w3.org/blob/main/explainers/template.md#references--acknowledgements">references and acknowledgements</a>.</p>
+   <h3 class="heading settled" data-level="3.6" id="deep-linking"><span class="secno">3.6. </span><span class="content">Enable Easy Deep Linking</span><a class="self-link" href="#deep-linking"></a></h3>
+   <p>You should host your explainer as HTML at a stable, readable URL,
+ideally next to where the specification is expected to land.
+Use a format
+that makes it easy for reviewers to link directly to sections inside the document,
+like Markdown or HTML.
+It’s fine to use a host like GitHub that automatically renders Markdown.</p>
    <hr>
    <p>By following these guidelines, you can create clear, concise, and accessible explainers that effectively communicate your proposed web standards specifications for W3C TAG review.</p>
    <h2 class="heading settled" id="template"><span class="content">Appendix A: Markdown Template</span><a class="self-link" href="#template"></a></h2>
