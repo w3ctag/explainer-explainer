@@ -52,11 +52,19 @@ it should contain the following key components:
 Follow the [tips](#tips) below to make your explainer as effective as possible.
 
 Once there is a reasonable amount of consensus on the approach and high-level design,
-the explainer can be used to guide spec writing,
-by serving as a high-level overview of the feature to be specified and the user need it serves.
+use the explainer to guide spec writing.
+Start your specification using whatever tool you prefer
+(e.g. [Bikeshed](https://speced.github.io/bikeshed/) or [Respec](https://respec.org/)),
+and then move (don't copy) sections from your explainer into the specification.
+Be sure to leave links from the now-empty explainer sections
+to the specification sections that received their content.
 
-Once the spec is written and the feature is shipped,
-the explainer can then provide a basis for author-facing documentation of the new feature.
+As your specification evolves,
+be sure to maintain the introduction, use cases, and examples
+so that novices can still read them.
+This will make it easier for
+["wide" reviewers](https://www.w3.org/guide/documentreview/#who-to-ask-for-wide-review)
+to do their reviews.
 
 # Examples of Good Explainers # {#good-explainers}
 
