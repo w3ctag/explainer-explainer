@@ -6,6 +6,7 @@ Status: NOTE-ED
 Group: tag
 Repository: w3ctag/explainer-explainer
 URL: https://w3ctag.github.io/explainer-explainer/
+TR: https://www.w3.org/TR/explainer-explainer/
 Editor: Daniel Appelquist, w3cid 35086, Invited Expert
 Editor: Matthew Tylee Atkinson, w3cid 68793, Samsung https://www.samsung.com
 Editor: Jeffrey Yasskin, w3cid 72192, Google https://google.com, jyasskin@google.com
