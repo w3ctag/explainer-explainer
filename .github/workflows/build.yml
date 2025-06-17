@@ -19,3 +19,4 @@ jobs:
           W3C_WG_DECISION_URL: https://github.com/w3ctag/meetings/blob/gh-pages/2025/03-Paris/minutes.md#explainer-explainer-adoption-into-wgs-1
           W3C_BUILD_OVERRIDE: |
             status: NOTE
+            metadata order: *, !*

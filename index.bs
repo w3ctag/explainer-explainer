@@ -22,7 +22,7 @@ Abstract: An explainer introduces a problem that a group of people are trying to
 !Participate: [Github repository](https://github.com/w3ctag/explainer-explainer)
 !Participate: [Issues](https://github.com/w3ctag/explainer-explainer/issues)
 !Explainer Template: [https://github.com/w3ctag/explainer-explainer/blob/main/template.md](https://github.com/w3ctag/explainer-explainer/blob/main/template.md)
-Metadata Include: Issue Tracking no
+Metadata Include: Issue Tracking no, Feedback no
 Metadata Order: !*, *
 </pre>
 
