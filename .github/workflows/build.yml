@@ -15,3 +15,8 @@ jobs:
         with:
           BUILD_FAIL_ON: warning
           GH_PAGES_BRANCH: gh-pages
+          W3C_ECHIDNA_TOKEN: ${{ secrets.ECHIDNA_TOKEN }}
+          W3C_WG_DECISION_URL: https://github.com/w3ctag/meetings/blob/gh-pages/2025/03-Paris/minutes.md#explainer-explainer-adoption-into-wgs-1
+          W3C_BUILD_OVERRIDE: |
+            status: NOTE
+            metadata order: *, !*
