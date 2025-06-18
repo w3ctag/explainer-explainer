@@ -5,10 +5,10 @@
   <title>Writing Effective Explainers</title>
   <meta content="NOTE-ED" name="w3c-status">
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED" rel="stylesheet">
-  <meta content="Bikeshed version 9a7a6709a, updated Tue May 27 16:45:34 2025 -0700" name="generator">
-  <link href="https://w3ctag.github.io/explainer-explainer/" rel="canonical">
+  <meta content="Bikeshed version 275834c42, updated Wed Jun 11 14:18:15 2025 -0700" name="generator">
+  <link href="https://www.w3.org/TR/explainer-explainer/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="b47b18c7052e7ef3c38cfd309fc779b40deab22f" name="revision">
+  <meta content="7aeea94374f2689642062b4d113ed59fa0556472" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -532,9 +532,13 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
 </style>
  <body class="h-entry">
   <div class="head">
-   <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
+   <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/">
+    <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
+</a>
+</p>
    <h1 class="p-name no-ref" id="title">Writing Effective Explainers</h1>
-   <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>, <time class="dt-updated" datetime="2025-06-04">4 June 2025</time></p>
+   <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>,
+    <time class="dt-updated" datetime="2025-06-18">18 June 2025</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -546,6 +550,8 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
       <dd><a href="https://github.com/w3ctag/explainer-explainer/blob/main/template.md">https://github.com/w3ctag/explainer-explainer/blob/main/template.md</a>
       <dt>This version:
       <dd><a class="u-url" href="https://w3ctag.github.io/explainer-explainer/">https://w3ctag.github.io/explainer-explainer/</a>
+      <dt>Latest published version:
+      <dd><a href="https://www.w3.org/TR/explainer-explainer/">https://www.w3.org/TR/explainer-explainer/</a>
       <dt class="editor">Editors:
       <dd class="editor p-author h-card vcard" data-editor-id="35086"><span class="p-name fn">Daniel Appelquist</span> (<span class="p-org org">Invited Expert</span>)
       <dd class="editor p-author h-card vcard" data-editor-id="68793"><span class="p-name fn">Matthew Tylee Atkinson</span> (<a class="p-org org" href="https://www.samsung.com">Samsung</a>)
@@ -554,7 +560,8 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     </div>
    </details>
    <div data-fill-with="warning"></div>
-   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/policies/#copyright">Copyright</a> © 2025 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/policies/#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/policies/#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/copyright/software-license/" rel="license" title="W3C Software and Document License">permissive document license</a> rules apply. </p>
+   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/policies/#copyright">Copyright</a> © 2025 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/policies/#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/policies/#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/copyright/software-license/" rel="license" title="W3C Software and Document License">permissive document license</a> rules apply.
+</p>
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
@@ -564,23 +571,39 @@ and helps everyone with an interest in the target problem find consensus on a go
   </div>
   <h2 class="no-num no-toc no-ref heading settled" id="sotd"><span class="content">Status of this document</span></h2>
   <div data-fill-with="status">
-   <p> <em>This section describes the status of this document at the time of its
-    publication. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the
+   <p>
+    <em>This section describes the status of this document at the time of its
+    publication. A list of current
+    <abbr title="World Wide Web Consortium">W3C</abbr> publications and the
     latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web
-    Consortium">W3C</abbr> standards and drafts index</a> at https://www.w3.org/TR/.</em> </p>
-   <p> This document was published by the <a href="https://www.w3.org/groups/other/tag/">Technical Architecture Group</a> as an Editor’s Draft intended for the Note track.
+    Consortium">W3C</abbr> standards and drafts index</a>
+    at https://www.w3.org/TR/.</em>
+  </p>
+   <p>
+    This document was published by the <a href="https://www.w3.org/groups/other/tag/">Technical Architecture Group</a>
+    as an Editor’s Draft intended for the Note track.
     This is a draft document and
-    may be updated, replaced or obsoleted by other documents at any time.
+    may be updated, replaced, or obsoleted by other documents at any time.
     It is inappropriate to cite this document as other than work in progress.
     Editor’s Drafts are not endorsed by <abbr title="World Wide Web
-    Consortium">W3C</abbr> nor its Members. </p>
+    Consortium">W3C</abbr> nor its Members.
+  </p>
    <p></p>
-   <p> Feedback and comments on this document are welcome. Please <a href="https://github.com/w3ctag/explainer-explainer/issues">file an issue</a> in this document’s <a href="https://github.com/w3ctag/explainer-explainer/">GitHub repository</a>. </p>
-   <p data-deliverer="34270"> The <a href="https://www.w3.org/policies/patent-policy/"><abbr title="World
+   <p>
+    Feedback and comments on this document are welcome. Please
+    <a href="https://github.com/w3ctag/explainer-explainer/issues">file an issue</a>
+    in this document’s
+    <a href="https://github.com/w3ctag/explainer-explainer/">GitHub repository</a>.
+  </p>
+   <p data-deliverer="34270">
+    The <a href="https://www.w3.org/policies/patent-policy/"><abbr title="World
     Wide Web Consortium">W3C</abbr> Patent Policy</a> does not carry any
-    licensing requirements or commitments on this document. </p>
-   <p> This document is governed by the <a href="https://www.w3.org/policies/process/20231103/" id="w3c_process_revision">03 November 2023 W3C
-    Process Document</a>. </p>
+    licensing requirements or commitments on this document.
+  </p>
+   <p>
+    This document is governed by the <a href="https://www.w3.org/policies/process/20231103/" id="w3c_process_revision">03 November 2023 W3C
+    Process Document</a>.
+  </p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
@@ -666,7 +689,8 @@ Use screenshots, mockups, wireframes, diagrams, and/or other visuals when possib
    <p>Sometimes the connection to the end-user need is complicated.
 Do explain the connection,
 even if this requires breaking the “be brief” rule.
-For example, see the <a href="https://github.com/mikewest/deprecating-document-domain/#a-problem">explainer for deprecating <code>document.domain</code></a>,
+For example, see the
+<a href="https://github.com/mikewest/deprecating-document-domain/#a-problem">explainer for deprecating <code>document.domain</code></a>,
 although even that could perhaps use another sentence
 explaining why security boundaries are important for users.</p>
    <h3 class="heading settled" data-level="3.2" id="write-simply"><span class="secno">3.2. </span><span class="content">Write Simply</span><a class="self-link" href="#write-simply"></a></h3>
@@ -725,7 +749,8 @@ It’s fine to use a host like GitHub that automatically renders Markdown.</p>
    <hr>
    <p>By following these guidelines, you can create clear, concise, and accessible explainers that effectively communicate your proposed web standards specifications for W3C TAG review.</p>
    <h2 class="heading settled" id="template"><span class="content">Appendix A: Markdown Template</span><a class="self-link" href="#template"></a></h2>
-   <p>See this rendered at <a href="https://github.com/w3ctag/explainer-explainer/blob/main/template.md">https://github.com/w3ctag/explainer-explainer/blob/main/template.md</a>.</p>
+   <p>See this rendered at
+<a href="https://github.com/w3ctag/explainer-explainer/blob/main/template.md">https://github.com/w3ctag/explainer-explainer/blob/main/template.md</a>.</p>
 <pre class="include-code highlight"># [Title]
 
 ## Authors:
