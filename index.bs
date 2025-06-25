@@ -55,9 +55,11 @@ Once there is a reasonable amount of consensus on the approach and high-level de
 use the explainer to guide spec writing.
 Start your specification using whatever tool you prefer
 (e.g. [Bikeshed](https://speced.github.io/bikeshed/) or [Respec](https://respec.org/)).
-You may want to move (not copy) sections from your explainer into the specification as you write it.
-If you do, be sure to leave links from the now-empty explainer sections
-to the specification sections that received their content.
+The parts of your explainer which document how developers should use the new API
+can be copied or moved into the specification.
+You should make sure the explainer remains useful either way:
+you can save some effort by replacing the moved sections with links into the relevant part of the spec,
+or you may prefer to edit the explainer as necessary to ensure it remains consistent.
 
 As your specification evolves,
 be sure to maintain the introduction, use cases, and examples
