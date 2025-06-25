@@ -53,8 +53,6 @@ Follow the [tips](#tips) below to make your explainer as effective as possible.
 
 Once there is a reasonable amount of consensus on the approach and high-level design,
 use the explainer to guide spec writing.
-Start your specification using whatever tool you prefer
-(e.g. [Bikeshed](https://speced.github.io/bikeshed/) or [Respec](https://respec.org/)).
 The parts of your explainer which document how developers should use the new API
 can be copied or moved into the specification.
 You should make sure the explainer remains useful either way:
