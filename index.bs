@@ -53,11 +53,14 @@ Follow the [tips](#tips) below to make your explainer as effective as possible.
 
 Once there is a reasonable amount of consensus on the approach and high-level design,
 use the explainer to guide spec writing.
-The parts of your explainer which document how developers should use the new API
-can be copied or moved into the specification.
-You should make sure the explainer remains useful either way:
-you can save some effort by replacing the moved sections with links into the relevant part of the spec,
-or you may prefer to edit the explainer as necessary to ensure it remains consistent.
+You can move or copy sections of your explainer directly into your specification
+or a [Group Note](https://www.w3.org/policies/process/#note-track)
+mentioned under the same [umbrella specification](https://www.w3.org/TR/spec-variability/#umbrella).
+Make sure that the explainer remains useful and accurate over time.
+If you move sections out of it,
+replace them with links to the relevant part of the spec.
+If you keep redundant text in the explainer,
+remember to update it as the specification changes.
 
 As your specification evolves,
 be sure to maintain the introduction, use cases, and examples
