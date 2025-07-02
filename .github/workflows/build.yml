@@ -20,3 +20,4 @@ jobs:
           W3C_BUILD_OVERRIDE: |
             status: NOTE
             metadata order: *, !*
+            metadata include: Participate no, Feedback yes
