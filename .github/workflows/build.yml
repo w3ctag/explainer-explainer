@@ -11,7 +11,7 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - uses: w3c/spec-prod@pubrules-profiles-patch
+      - uses: w3c/spec-prod@v2
         with:
           BUILD_FAIL_ON: warning
           GH_PAGES_BRANCH: gh-pages
@@ -21,4 +21,3 @@ jobs:
             status: NOTE
             metadata order: *, !*
             metadata include: Participate no, Feedback yes
-          VALIDATE_PUBRULES: true
