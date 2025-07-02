@@ -62,8 +62,8 @@ replace them with links to the relevant part of the spec.
 If you keep redundant text in the explainer,
 remember to update it as the specification changes.
 
-As your specification evolves,
-be sure to maintain the introduction, use cases, and examples
+As your specification and explainer evolve,
+be sure to maintain their introductions, use cases, and examples
 so that novices can still read them.
 This will make it easier for
 ["wide" reviewers](https://www.w3.org/guide/documentreview/#who-to-ask-for-wide-review)
