@@ -52,11 +52,22 @@ it should contain the following key components:
 Follow the [tips](#tips) below to make your explainer as effective as possible.
 
 Once there is a reasonable amount of consensus on the approach and high-level design,
-the explainer can be used to guide spec writing,
-by serving as a high-level overview of the feature to be specified and the user need it serves.
+use the explainer to guide spec writing.
+You can move or copy sections of your explainer directly into your specification
+or a [Group Note](https://www.w3.org/policies/process/#note-track)
+mentioned under the same [umbrella specification](https://www.w3.org/TR/spec-variability/#umbrella).
+Make sure that the explainer remains useful and accurate over time.
+If you move sections out of it,
+replace them with links to the relevant part of the spec.
+If you keep redundant text in the explainer,
+remember to update it as the specification changes.
 
-Once the spec is written and the feature is shipped,
-the explainer can then provide a basis for author-facing documentation of the new feature.
+As your specification and explainer evolve,
+be sure to maintain their introductions, use cases, and examples
+so that novices can still read them.
+This will make it easier for
+["wide" reviewers](https://www.w3.org/guide/documentreview/#who-to-ask-for-wide-review)
+to do their reviews.
 
 # Examples of Good Explainers # {#good-explainers}
 
