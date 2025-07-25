@@ -93,13 +93,22 @@ even if the connection is complex or
 you discovered the problem by talking to web developers who emphasized their own needs.
 Use screenshots, mockups, wireframes, diagrams, and/or other visuals when possible, [with alt text](#alt-text).
 
-Sometimes the connection to the end-user need is complicated.
-Do explain the connection,
-even if this requires breaking the “be brief” rule.
-For example, see the
-[explainer for deprecating `document.domain`](https://github.com/mikewest/deprecating-document-domain/#a-problem),
-although even that could perhaps use another sentence
-explaining why security boundaries are important for users.
+Some features are intended to help authors and
+have no effect on end-users aside from websites being delivered more cheaply.
+For example, [[css-nesting inline|CSS nesting]] primarily makes it easier to write stylesheets,
+and the potential effect on file sizes wasn't measured as part of justifying the feature.
+On the other hand,
+a feature like [[privacy-preserving-attribution inline|Privacy-Preserving Attribution]]
+isn't in this category because it does have some negative effect on end-users
+(via bandwidth costs and information exposure under its privacy budgets),
+so its specification argues that these costs are justified by greater end-user benefits.
+
+End-users come before authors
+in the [[design-principles#priority-of-constituencies|priority of constituencies]],
+so when explaining this kind of feature,
+you need to clearly establish that there's no negative effect on end-users.
+*After* proving that end-users aren't harmed,
+then you should clearly describe the developer problem you're trying to solve.
 
 ## Write Simply ## {#write-simply}
 
