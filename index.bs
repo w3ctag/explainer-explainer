@@ -105,7 +105,7 @@ so its specification argues that these costs are justified by greater end-user b
 
 End-users come before authors
 in the [[design-principles#priority-of-constituencies|priority of constituencies]],
-so when explaining this kind of feature,
+so when explaining features designed for authors,
 you need to clearly establish that there's no negative effect on end-users.
 *After* proving that end-users aren't harmed,
 then you should clearly describe the developer problem you're trying to solve.
