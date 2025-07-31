@@ -19,6 +19,8 @@
 
 ## Introduction
 
+Redlines are the fundamental unit of data in any corporate practice. We would like to be able to produce them easily and to represent their information content thoughtfully. This is important because we need the machine to `see` what we are doing. 
+
 [The "executive summary" or "abstract".
 Explain in a few sentences what the goals of the project are,
 and a brief overview of how the solution works.
