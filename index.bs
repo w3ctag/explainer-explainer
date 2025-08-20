@@ -93,22 +93,19 @@ even if the connection is complex or
 you discovered the problem by talking to web developers who emphasized their own needs.
 Use screenshots, mockups, wireframes, diagrams, and/or other visuals when possible, [with alt text](#alt-text).
 
-Some features are intended to help authors and
-have no effect on end-users aside from websites being delivered more cheaply.
-For example, [[css-nesting inline|CSS nesting]] primarily makes it easier to write stylesheets,
-and the potential effect on file sizes wasn't measured as part of justifying the feature.
-On the other hand,
-a feature like [[privacy-preserving-attribution inline|Privacy-Preserving Attribution]]
-isn't in this category because it does have some negative effect on end-users
-(via bandwidth costs and information exposure under its privacy budgets),
-so its specification argues that these costs are justified by greater end-user benefits.
+Sometimes the connection to the end-user need is complicated.
+Do explain the connection,
+even if this requires breaking the “be brief” rule.
+For example, see the
+[explainer for deprecating `document.domain`](https://github.com/mikewest/deprecating-document-domain/#a-problem),
+and see [[#boilerplate-user-benefit]] for text to
+explain why security boundaries are important for users.
 
-End-users come before authors
-in the [[design-principles#priority-of-constituencies|priority of constituencies]],
-so when explaining features designed for authors,
-you need to clearly establish that there's no negative effect on end-users.
-*After* proving that end-users aren't harmed,
-then you should clearly describe the developer problem you're trying to solve.
+Some features are intended to help authors and
+have no effect on end-users aside from websites being developed more easily.
+See [[#authoring-user-benefit|the boilerplate for ease of authoring]]
+for some constraints on this category
+and boilerplate to use in this case.
 
 ## Write Simply ## {#write-simply}
 
@@ -188,3 +185,59 @@ See this rendered at
 path: template.md
 highlight: markdown
 </pre>
+
+# Appendix B: Boilerplate Explanations of User Benefit # {#boilerplate-user-benefit}
+
+Some classes of features are meant to
+help authors achieve some kind of user benefit,
+like security, accessibility, or performance,
+more easily.
+Explainers for these features should say why that general area helps users,
+but explainer authors should
+spend most of their time explaining why the feature improves the area.
+This section provides some boilerplate for some common areas
+so that authors don't need to rewrite it every time.
+
+## Accessibility ## {#accessibility-user-benefit}
+
+> This feature is meant to improve website accessibility,
+> which ensures all users can browse the web,
+> even if they need to interact with their computers
+> differently from the majority.
+
+## Ease of Authoring ## {#authoring-user-benefit}
+
+End-users come before authors
+in the [[design-principles#priority-of-constituencies|priority of constituencies]],
+so when explaining features designed for authors,
+you need to clearly establish that there's no negative effect on end-users.
+
+For example, [[css-nesting inline|CSS nesting]] primarily makes it easier to write stylesheets,
+and the potential effect on file sizes wasn't measured as part of justifying the feature.
+On the other hand,
+a feature like [[privacy-preserving-attribution inline|Privacy-Preserving Attribution]]
+isn't in this category because it does have some negative effect on end-users
+(via bandwidth costs and information exposure under its privacy budgets),
+so its specification argues that these costs are justified by greater end-user benefits.
+
+> This feature is meant to make it easier to write websites
+> and to have no negative effects on end-users.
+> When websites are easier to write,
+> users get more of them
+> and don't need to pay as much (in fees or ads)
+> to access them.
+> [If it's not obvious:]
+> See <code>&lt;a href="#<var ignore>later-section</var>"></code>below`</a>`
+> for an analysis of why the proposed solution doesn't harm end-users.
+
+## Performance ## {#performance-user-benefit}
+
+> This feature is meant to improve website performance,
+> which helps users waste less time waiting
+> and helps users on low-end devices and slow connections
+> browse the web at all.
+
+## Security ## {#security-user-benefit}
+
+> This feature is meant to improve website security,
+> which reduces the frequency of breaches that compromise user data.
