@@ -213,7 +213,7 @@ so when explaining features designed for authors,
 you need to clearly establish that there's no negative effect on end-users.
 
 For example, [[css-nesting inline|CSS nesting]] primarily makes it easier to write stylesheets,
-and the potential effect on file sizes wasn't measured as part of justifying the feature.
+and the potential reduction in file sizes wasn't measured as part of justifying the feature.
 On the other hand,
 a feature like [[privacy-preserving-attribution inline|Privacy-Preserving Attribution]]
 isn't in this category because it does have some negative effect on end-users
