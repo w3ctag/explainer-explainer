@@ -103,9 +103,8 @@ explain why security boundaries are important for users.
 
 Some features are intended to help authors and
 have no effect on end-users aside from websites being developed more easily.
-See [[#authoring-user-benefit|the boilerplate for ease of authoring]]
-for some constraints on this category
-and boilerplate to use in this case.
+If your feature doesn't cause any harm or benefit to users,
+use [[#authoring-user-benefit|the boilerplate for ease of authoring]].
 
 ## Write Simply ## {#write-simply}
 
