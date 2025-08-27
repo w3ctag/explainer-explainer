@@ -5,10 +5,10 @@
   <title>Writing Effective Explainers</title>
   <meta content="NOTE-ED" name="w3c-status">
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED" rel="stylesheet">
-  <meta content="Bikeshed version 618007319, updated Thu Jun 26 17:23:55 2025 -0700" name="generator">
+  <meta content="Bikeshed version 3f621ba99, updated Mon Jul 28 15:38:36 2025 -0700" name="generator">
   <link href="https://www.w3.org/TR/explainer-explainer/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="30c67e473eb0f9ef2f5c6ff660e6c7028e76187c" name="revision">
+  <meta content="0d4cb9984d7393667d67859b553396e02192e5c8" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -538,7 +538,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
 </p>
    <h1 class="p-name no-ref" id="title">Writing Effective Explainers</h1>
    <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>,
-    <time class="dt-updated" datetime="2025-07-03">3 July 2025</time></p>
+    <time class="dt-updated" datetime="2025-08-27">27 August 2025</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -577,8 +577,7 @@ and helps everyone with an interest in the target problem find consensus on a go
     publication. A list of current
     <abbr title="World Wide Web Consortium">W3C</abbr> publications and the
     latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web
-    Consortium">W3C</abbr> standards and drafts index</a>
-   .</em>
+    Consortium">W3C</abbr> standards and drafts index</a>.</em>
   </p>
    <p>
     This document was published by the <a href="https://www.w3.org/groups/other/tag/">Technical Architecture Group</a>
@@ -602,7 +601,7 @@ and helps everyone with an interest in the target problem find consensus on a go
     licensing requirements or commitments on this document.
   </p>
    <p>
-    This document is governed by the <a href="https://www.w3.org/policies/process/20231103/" id="w3c_process_revision">03 November 2023 W3C
+    This document is governed by the <a href="https://www.w3.org/policies/process/20250818/" id="w3c_process_revision">18 August 2025 W3C
     Process Document</a>.
   </p>
   </div>
@@ -623,6 +622,20 @@ and helps everyone with an interest in the target problem find consensus on a go
       <li><a href="#deep-linking"><span class="secno">3.6</span> <span class="content">Enable Easy Deep Linking</span></a>
      </ol>
     <li><a href="#template"><span class="secno"></span> <span class="content">Appendix A: Markdown Template</span></a>
+    <li>
+     <a href="#boilerplate-user-benefit"><span class="secno"></span> <span class="content">Appendix B: Boilerplate Explanations of User Benefit</span></a>
+     <ol class="toc">
+      <li><a href="#accessibility-user-benefit"><span class="secno"></span> <span class="content">Accessibility</span></a>
+      <li><a href="#authoring-user-benefit"><span class="secno"></span> <span class="content">Ease of Authoring</span></a>
+      <li><a href="#performance-user-benefit"><span class="secno"></span> <span class="content">Performance</span></a>
+      <li><a href="#security-user-benefit"><span class="secno"></span> <span class="content">Security</span></a>
+     </ol>
+    <li>
+     <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
+     <ol class="toc">
+      <li><a href="#normative"><span class="secno"></span> <span class="content">Normative References</span></a>
+      <li><a href="#informative"><span class="secno"></span> <span class="content">Informative References</span></a>
+     </ol>
    </ol>
   </nav>
   <main>
@@ -703,8 +716,12 @@ Do explain the connection,
 even if this requires breaking the “be brief” rule.
 For example, see the
 <a href="https://github.com/mikewest/deprecating-document-domain/#a-problem">explainer for deprecating <code>document.domain</code></a>,
-although even that could perhaps use another sentence
-explaining why security boundaries are important for users.</p>
+and see <a href="#boilerplate-user-benefit">Appendix B: Boilerplate Explanations of User Benefit</a> for text to
+explain why security boundaries are important for users.</p>
+   <p>Some features are intended to help authors and
+have no effect on end-users aside from websites being developed more easily.
+If your feature doesn’t cause any harm or benefit to users,
+use <a href="#authoring-user-benefit">the boilerplate for ease of authoring</a>.</p>
    <h3 class="heading settled" data-level="3.2" id="write-simply"><span class="secno">3.2. </span><span class="content">Write Simply</span><a class="self-link" href="#write-simply"></a></h3>
    <p>Use common words to help readers who aren’t native or even fluent English speakers.</p>
    <p>Be concise.</p>
@@ -904,5 +921,70 @@ for their work on similar problems that influenced this proposal.
 <c- k>-</c-> [Proposal 3]
 <c- k>-</c-> [etc.]
 </pre>
+   <h2 class="heading settled" id="boilerplate-user-benefit"><span class="content">Appendix B: Boilerplate Explanations of User Benefit</span><a class="self-link" href="#boilerplate-user-benefit"></a></h2>
+   <p>Some classes of features are meant to
+help authors achieve some kind of user benefit,
+like security, accessibility, or performance,
+more easily.
+Explainers for these features should say why that general area helps users,
+but explainer authors should
+spend most of their time explaining why the feature improves the area.
+This section provides some boilerplate for some common areas
+so that authors don’t need to rewrite it every time.</p>
+   <h3 class="heading settled" id="accessibility-user-benefit"><span class="content">Accessibility</span><a class="self-link" href="#accessibility-user-benefit"></a></h3>
+   <blockquote>
+    <p>This feature is meant to improve website accessibility,
+which ensures all users can browse the web,
+even if they need to interact with their computers
+differently from the majority.</p>
+   </blockquote>
+   <h3 class="heading settled" id="authoring-user-benefit"><span class="content">Ease of Authoring</span><a class="self-link" href="#authoring-user-benefit"></a></h3>
+   <p>End-users come before authors
+in the <a href="https://w3ctag.github.io/design-principles/#priority-of-constituencies">priority of constituencies</a>,
+so when explaining features designed for authors,
+you need to clearly establish that there’s no negative effect on end-users.</p>
+   <p>For example, <a data-biblio-display="inline" data-link-type="biblio" href="https://drafts.csswg.org/css-nesting/">CSS nesting</a> primarily makes it easier to write stylesheets,
+and the potential reduction in file sizes wasn’t measured as part of justifying the feature.
+On the other hand,
+a feature like <a data-biblio-display="inline" data-link-type="biblio" href="https://w3c.github.io/ppa/">Privacy-Preserving Attribution</a>
+isn’t in this category because it does have some negative effect on end-users
+(via bandwidth costs and information exposure under its privacy budgets),
+so its specification argues that these costs are justified by greater end-user benefits.</p>
+   <blockquote>
+    <p>This feature is meant to make it easier to write websites
+and to have no negative effects on end-users.
+When websites are easier to write,
+users get more of them
+and don’t need to pay as much (in fees or ads)
+to access them.
+[If it’s not obvious:]
+See <code>&lt;a href="#<var>later-section</var>"></code>below<code>&lt;/a></code>
+for an analysis of why the proposed solution doesn’t harm end-users.</p>
+   </blockquote>
+   <h3 class="heading settled" id="performance-user-benefit"><span class="content">Performance</span><a class="self-link" href="#performance-user-benefit"></a></h3>
+   <blockquote>
+    <p>This feature is meant to improve website performance,
+which helps users waste less time waiting
+and helps users on low-end devices and slow connections
+browse the web at all.</p>
+   </blockquote>
+   <h3 class="heading settled" id="security-user-benefit"><span class="content">Security</span><a class="self-link" href="#security-user-benefit"></a></h3>
+   <blockquote>
+    <p>This feature is meant to improve website security,
+which reduces the frequency of breaches that compromise user data.</p>
+   </blockquote>
   </main>
   <script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script>
+  <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
+  <h3 class="no-num no-ref heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
+  <dl>
+   <dt id="biblio-design-principles">[DESIGN-PRINCIPLES]
+   <dd>Martin Thomson; Jeffrey Yasskin. <a href="https://w3ctag.github.io/design-principles/"><cite>Web Platform Design Principles</cite></a>. URL: <a href="https://w3ctag.github.io/design-principles/">https://w3ctag.github.io/design-principles/</a>
+  </dl>
+  <h3 class="no-num no-ref heading settled" id="informative"><span class="content">Informative References</span><a class="self-link" href="#informative"></a></h3>
+  <dl>
+   <dt id="biblio-css-nesting">[CSS-NESTING]
+   <dd>Tab Atkins Jr.; Adam Argyle. <a href="https://drafts.csswg.org/css-nesting/"><cite>CSS Nesting Module</cite></a>. URL: <a href="https://drafts.csswg.org/css-nesting/">https://drafts.csswg.org/css-nesting/</a>
+   <dt id="biblio-privacy-preserving-attribution">[PRIVACY-PRESERVING-ATTRIBUTION]
+   <dd>Andrew Paseltiner; et al. <a href="https://w3c.github.io/ppa/"><cite>Privacy-Preserving Attribution: Level 1</cite></a>. URL: <a href="https://w3c.github.io/ppa/">https://w3c.github.io/ppa/</a>
+  </dl>
