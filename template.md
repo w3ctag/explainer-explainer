@@ -104,10 +104,10 @@ Describe them as open questions here, and adjust the description once you make a
 
 [etc.]
 
-## Accessibility, Privacy, and Security Considerations
+## Accessibility, Internationalization, Privacy, and Security Considerations
 
-[Highlight any accessibility, security, and privacy implications that have been taken into account
-during the design process.]
+[Highlight any accessibility, internationalization, privacy, and security implications
+that have been taken into account during the design process.]
 
 ## Stakeholder Feedback / Opposition
 
