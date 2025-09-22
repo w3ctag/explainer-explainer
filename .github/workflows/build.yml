@@ -21,3 +21,4 @@ jobs:
             status: NOTE
             metadata order: *, !*
             metadata include: Participate no, Feedback yes
+          VALIDATE_PUBRULES: true
