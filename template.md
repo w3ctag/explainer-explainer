@@ -85,17 +85,40 @@ group), list them here.]
 ## Alternatives considered
 
 [This should include as many alternatives as you can,
-from high level architectural decisions down to alternative naming choices.]
+from high level architectural decisions down to alternative naming choices.
+If you capture your alternatives as Architectural Decision Records,
+use this section to link to the ADRs.]
 
 ### [Alternative 1]
 
-[Describe an alternative which was considered,
-and why you decided against it.
+[Describe an alternative which was considered.
 This alternative may have been part of a prior proposal in the same area,
 or it may be new.
-If you did any research in making this decision, discuss it here.]
+If you did any research in evaluating this alternative, discuss it here.]
+
+#### Pros
+
+* [List]
+
+#### Cons
+
+* [List]
+
+#### Reason for rejection
+
+[Why do you feel the pros outweigh the cons?]
 
 ### [Alternative 2]
+
+#### Pros
+
+* [List]
+
+#### Cons
+
+* [List]
+
+#### Reason for rejection
 
 [You may not have decided about some alternatives.
 Describe them as open questions here, and adjust the description once you make a decision.]
