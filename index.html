@@ -5,10 +5,10 @@
   <title>Writing Effective Explainers</title>
   <meta content="NOTE-ED" name="w3c-status">
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED" rel="stylesheet">
-  <meta content="Bikeshed version 3f621ba99, updated Mon Jul 28 15:38:36 2025 -0700" name="generator">
+  <meta content="Bikeshed version 5d4d5b9a8, updated Fri Apr 17 13:49:40 2026 -0700" name="generator">
   <link href="https://www.w3.org/TR/explainer-explainer/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="d5e6416f993e980409f06310edcede3cfc596777" name="revision">
+  <meta content="c27209e0b8b35b554d161492d4bb13d8854534bf" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -304,7 +304,7 @@ pre .property::before, pre .property::after {
 </style>
 <style>/* Boilerplate: style-counters */
 body {
-    counter-reset: example figure issue;
+    counter-reset: example figure issue table;
 }
 .issue {
     counter-increment: issue;
@@ -321,7 +321,7 @@ body {
 }
 .invalid.example:not(.no-marker)::before,
 .illegal.example:not(.no-marker)::before {
-    content: "Invalid Example" counter(example);
+    content: "Invalid Example " counter(example);
 }
 
 figcaption {
@@ -329,6 +329,13 @@ figcaption {
 }
 figcaption:not(.no-marker)::before {
     content: "Figure " counter(figure) " ";
+}
+
+figure.table figcaption {
+    counter-increment: table;
+}
+figure.table figcaption:not(.no-marker)::before {
+    content: "Table " counter(table) " ";
 }
 </style>
 <style>/* Boilerplate: style-issues */
@@ -529,6 +536,30 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     c-[vm] { color: #cb4b16 } /* Name.Variable.Magic */
     c-[il] { color: #657b83 } /* Literal.Number.Integer.Long */
 }
+
+@media print {
+    /* Darken colors for print that would otherwise print too faintly */
+    c-[c]  { color: #555555 } /* Comment */
+    c-[d]  { color: #555555 } /* Comment.Multiline */
+    c-[cp] { color: #555555 } /* Comment.Preproc */
+    c-[c1] { color: #555555 } /* Comment.Single */
+    c-[cs] { color: #555555 } /* Comment.Special */
+    c-[o]  { color: #222222 } /* Operator */
+    c-[p]  { color: #222222 } /* Punctuation */
+    c-[ow] { color: #222222 } /* Operator.Word */
+    c-[s]  { color: #664400 } /* Literal.String */
+    c-[t]  { color: #664400 } /* Literal.String.Single */
+    c-[u]  { color: #664400 } /* Literal.String.Double */
+    c-[sb] { color: #664400 } /* Literal.String.Backtick */
+    c-[sc] { color: #664400 } /* Literal.String.Char */
+    c-[sd] { color: #664400 } /* Literal.String.Doc */
+    c-[se] { color: #664400 } /* Literal.String.Escape */
+    c-[sh] { color: #664400 } /* Literal.String.Heredoc */
+    c-[si] { color: #664400 } /* Literal.String.Interpol */
+    c-[sx] { color: #664400 } /* Literal.String.Other */
+    c-[sr] { color: #664400 } /* Literal.String.Regex */
+    c-[ss] { color: #664400 } /* Literal.String.Symbol */
+}
 </style>
  <body class="h-entry">
   <div class="head">
@@ -536,9 +567,9 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
 </a>
 </p>
-   <h1 class="p-name no-ref" id="title">Writing Effective Explainers</h1>
+   <h1 class="no-ref p-name" id="title">Writing Effective Explainers</h1>
    <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>,
-    <time class="dt-updated" datetime="2025-10-01">1 October 2025</time></p>
+    <time class="dt-updated" datetime="2026-04-23">23 April 2026</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -553,24 +584,24 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
       <dt>Latest published version:
       <dd><a href="https://www.w3.org/TR/explainer-explainer/">https://www.w3.org/TR/explainer-explainer/</a>
       <dt class="editor">Editors:
-      <dd class="editor p-author h-card vcard" data-editor-id="68793"><span class="p-name fn">Matthew Tylee Atkinson</span> (<a class="p-org org" href="https://www.samsung.com">Samsung</a>)
-      <dd class="editor p-author h-card vcard" data-editor-id="72192"><a class="p-name fn u-email email" href="mailto:jyasskin@google.com">Jeffrey Yasskin</a> (<a class="p-org org" href="https://google.com">Google</a>)
+      <dd class="editor h-card p-author vcard" data-editor-id="68793"><span class="fn p-name">Matthew Tylee Atkinson</span> (<a class="org p-org" href="https://www.samsung.com">Samsung</a>)
+      <dd class="editor h-card p-author vcard" data-editor-id="72192"><a class="email fn p-name u-email" href="mailto:jyasskin@google.com">Jeffrey Yasskin</a> (<a class="org p-org" href="https://google.com">Google</a>)
       <dt class="editor">Former Editor:
-      <dd class="editor p-author h-card vcard" data-editor-id="35086"><span class="p-name fn">Daniel Appelquist</span> (<span class="p-org org">Invited Expert</span>)
+      <dd class="editor h-card p-author vcard" data-editor-id="35086"><span class="fn p-name">Daniel Appelquist</span> (<span class="org p-org">Invited Expert</span>)
      </dl>
     </div>
    </details>
    <div data-fill-with="warning"></div>
-   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/policies/#copyright">Copyright</a> © 2025 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/policies/#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/policies/#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/copyright/software-license/" rel="license" title="W3C Software and Document License">permissive document license</a> rules apply.
+   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/policies/#copyright">Copyright</a> © 2026 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/policies/#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/policies/#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/copyright/software-license/" rel="license" title="W3C Software and Document License">permissive document license</a> rules apply.
 </p>
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
-   <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
+   <h2 class="heading no-num no-ref no-toc settled" id="abstract"><span class="content">Abstract</span></h2>
    <p>An explainer introduces a problem that a group of people are trying to solve,
 and helps everyone with an interest in the target problem find consensus on a good way to solve it.</p>
   </div>
-  <h2 class="no-num no-toc no-ref heading settled" id="sotd"><span class="content">Status of this document</span></h2>
+  <h2 class="heading no-num no-ref no-toc settled" id="sotd"><span class="content">Status of this document</span></h2>
   <div data-fill-with="status">
    <p>
     <em>This section describes the status of this document at the time of its
@@ -607,8 +638,8 @@ and helps everyone with an interest in the target problem find consensus on a go
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
-   <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
-   <ol class="toc" role="directory">
+   <h2 class="no-num no-ref no-toc" id="contents">Table of Contents</h2>
+   <ol class="toc">
     <li><a href="#introduction"><span class="secno">1</span> <span class="content">Introduction</span></a>
     <li><a href="#good-explainers"><span class="secno">2</span> <span class="content">Examples of Good Explainers</span></a>
     <li>
@@ -634,7 +665,7 @@ and helps everyone with an interest in the target problem find consensus on a go
      <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
      <ol class="toc">
       <li><a href="#normative"><span class="secno"></span> <span class="content">Normative References</span></a>
-      <li><a href="#informative"><span class="secno"></span> <span class="content">Informative References</span></a>
+      <li><a href="#informative"><span class="secno"></span> <span class="content">Non-Normative References</span></a>
      </ol>
    </ol>
   </nav>
@@ -731,7 +762,7 @@ and you don’t want them to miss your points.</p>
    <ul>
     <li data-md>
      <p>Use <strong>bold</strong> to draw readers' eyes to the most important points.
-(And _italics_ for intra-sentence emphasis.)</p>
+(And <em>italics</em> for intra-sentence emphasis.)</p>
     <li data-md>
      <p>Use bulleted or ordered lists when listing things.</p>
     <li data-md>
@@ -780,7 +811,7 @@ It’s fine to use a host like GitHub that automatically renders Markdown.</p>
    <h2 class="heading settled" id="template"><span class="content">Appendix A: Markdown Template</span><a class="self-link" href="#template"></a></h2>
    <p>See this rendered at
 <a href="https://github.com/w3ctag/explainer-explainer/blob/main/template.md">https://github.com/w3ctag/explainer-explainer/blob/main/template.md</a>.</p>
-<pre class="include-code highlight"># [Title]
+<pre class="highlight include-code"># [Title]
 
 ## Authors:
 
@@ -946,7 +977,7 @@ you need to clearly establish that there’s no negative effect on end-users.</p
    <p>For example, <a data-biblio-display="inline" data-link-type="biblio" href="https://drafts.csswg.org/css-nesting/">CSS nesting</a> primarily makes it easier to write stylesheets,
 and the potential reduction in file sizes wasn’t measured as part of justifying the feature.
 On the other hand,
-a feature like <a data-biblio-display="inline" data-link-type="biblio" href="https://w3c.github.io/ppa/">Privacy-Preserving Attribution</a>
+a feature like <a data-biblio-display="inline" data-link-type="biblio" href="https://w3c.github.io/attribution/">Privacy-Preserving Attribution</a>
 isn’t in this category because it does have some negative effect on end-users
 (via bandwidth costs and information exposure under its privacy budgets),
 so its specification argues that these costs are justified by greater end-user benefits.</p>
@@ -975,16 +1006,16 @@ which reduces the frequency of breaches that compromise user data.</p>
    </blockquote>
   </main>
   <script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script>
-  <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
-  <h3 class="no-num no-ref heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
+  <h2 class="heading no-num no-ref settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
+  <h3 class="heading no-num no-ref settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
   <dl>
    <dt id="biblio-design-principles">[DESIGN-PRINCIPLES]
    <dd>Martin Thomson; Jeffrey Yasskin. <a href="https://w3ctag.github.io/design-principles/"><cite>Web Platform Design Principles</cite></a>. URL: <a href="https://w3ctag.github.io/design-principles/">https://w3ctag.github.io/design-principles/</a>
   </dl>
-  <h3 class="no-num no-ref heading settled" id="informative"><span class="content">Informative References</span><a class="self-link" href="#informative"></a></h3>
+  <h3 class="heading no-num no-ref settled" id="informative"><span class="content">Non-Normative References</span><a class="self-link" href="#informative"></a></h3>
   <dl>
    <dt id="biblio-css-nesting">[CSS-NESTING]
-   <dd>Tab Atkins Jr.; Adam Argyle. <a href="https://drafts.csswg.org/css-nesting/"><cite>CSS Nesting Module</cite></a>. URL: <a href="https://drafts.csswg.org/css-nesting/">https://drafts.csswg.org/css-nesting/</a>
+   <dd>Tab Atkins Jr.. <a href="https://drafts.csswg.org/css-nesting/"><cite>CSS Nesting Module Level 1</cite></a>. URL: <a href="https://drafts.csswg.org/css-nesting/">https://drafts.csswg.org/css-nesting/</a>
    <dt id="biblio-privacy-preserving-attribution">[PRIVACY-PRESERVING-ATTRIBUTION]
-   <dd>Andrew Paseltiner; et al. <a href="https://w3c.github.io/ppa/"><cite>Privacy-Preserving Attribution: Level 1</cite></a>. URL: <a href="https://w3c.github.io/ppa/">https://w3c.github.io/ppa/</a>
+   <dd>Andrew Paseltiner; et al. <a href="https://w3c.github.io/attribution/"><cite>Attribution Level 1</cite></a>. URL: <a href="https://w3c.github.io/attribution/">https://w3c.github.io/attribution/</a>
   </dl>
