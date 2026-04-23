@@ -117,7 +117,7 @@ They may be doing three other things, with a headache and a looming deadline,
 and you don't want them to miss your points.
 
 - Use **bold** to draw readers' eyes to the most important points.
-	(And _italics_ for intra-sentence emphasis.)
+	(And *italics* for intra-sentence emphasis.)
 - Use bulleted or ordered lists when listing things.
 - Keep your paragraphs and sentences short. Paragraphs should contain one idea only, and likely shouldn't be more than a couple of sentences. Break up large paragraphs as much as possible.
 
