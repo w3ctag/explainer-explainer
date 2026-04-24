@@ -183,6 +183,11 @@ Alternatively, you can collect a set of [Architectural Decision Records](https:/
 but we don't have enough experience to recommend this structure in particular.
 If you have a directory of ADRs, link them from this section of your explainer.
 
+Occasionally, an alternative will be clearly unacceptable for some reason,
+for example because it's strictly worse than another alternative that is analyzed in detail in another section.
+In that case, if you're sure the reviewers will agree,
+you can skip the sub-sections and describe just the reason for rejection.
+
 ## Connect to History ## {#history}
 
 Many important end-user problems have a history of failed and incomplete attempts to solve them.
