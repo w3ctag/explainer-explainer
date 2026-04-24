@@ -175,7 +175,7 @@ Explanation of the alternative design.
 
 #### Reason for rejection
 
-Why do you feel the pros outweigh the cons?
+Why do you feel the cons outweigh the pros?
 ```
 
 Alternatively, you can collect a set of [Architectural Decision Records](https://adr.github.io/) as files in your repository.

@@ -106,7 +106,7 @@ If you did any research in evaluating this alternative, discuss it here.]
 
 #### Reason for rejection
 
-[Why do you feel the pros outweigh the cons?]
+[Why do you feel the cons outweigh the pros?]
 
 ### [Alternative 2]
 
