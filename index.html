@@ -8,7 +8,7 @@
   <meta content="Bikeshed version 5d4d5b9a8, updated Fri Apr 17 13:49:40 2026 -0700" name="generator">
   <link href="https://www.w3.org/TR/explainer-explainer/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="c27209e0b8b35b554d161492d4bb13d8854534bf" name="revision">
+  <meta content="853418960ccfcc11744f5d7b0b2da4d9810a071c" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -569,7 +569,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
 </p>
    <h1 class="no-ref p-name" id="title">Writing Effective Explainers</h1>
    <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>,
-    <time class="dt-updated" datetime="2026-04-23">23 April 2026</time></p>
+    <time class="dt-updated" datetime="2026-04-29">29 April 2026</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -792,7 +792,36 @@ but always provide text alternatives for readers who may not be able to see imag
    <h3 class="heading settled" data-level="3.4" id="alternatives"><span class="secno">3.4. </span><span class="content">Show the Alternatives That You Considered</span><a class="self-link" href="#alternatives"></a></h3>
    <p>As your design evolves, keep track of and make a note of alternatives which have been considered.
 Explain what makes them worse for the web than your primary proposal.</p>
-   <p>You undoubtedly had reasons not to choose those alternatives, but reviewers and other stakeholders may not have that context. Avoid redundant "what about [already-ruled out alternative]" type questions by explaining why those alternatives were ruled out.</p>
+   <p>You undoubtedly had reasons not to choose those alternatives,
+but reviewers and other stakeholders may not have that context.
+Avoid redundant "what about [already-ruled out alternative]" type questions by explaining why those alternatives were ruled out.</p>
+   <p>Format the alternatives in a way that makes them easy to understand.
+There are a few ways to do this.
+First, you can structure the alternative as:</p>
+<pre class="highlight language-markdown">### Name of the alternative
+
+Explanation of the alternative design.
+
+#### Advantages
+
+<c- k>*</c-> List
+
+#### Disadvantages
+
+<c- k>*</c-> List
+
+#### Reason for rejection
+
+Why do you feel the disadvantages outweigh the advantages?
+</pre>
+   <p>Alternatively, you can collect a set of <a href="https://adr.github.io/">Architectural Decision Records</a> as files in your repository.
+<a href="https://adr.github.io/madr/#overview">https://adr.github.io/madr/</a> may contain a good template,
+but we don’t have enough experience to recommend this structure in particular.
+If you have a directory of ADRs, link them from this section of your explainer.</p>
+   <p>Occasionally, an alternative will be clearly unacceptable for some reason,
+for example because it’s strictly worse than another alternative that is analyzed in detail in another section.
+In that case, if you’re sure the reviewers will agree,
+you can skip the sub-sections and describe just the reason for rejection.</p>
    <h3 class="heading settled" data-level="3.5" id="history"><span class="secno">3.5. </span><span class="content">Connect to History</span><a class="self-link" href="#history"></a></h3>
    <p>Many important end-user problems have a history of failed and incomplete attempts to solve them.
 Look for and draw on those ideas when developing and explaining your own proposal.
@@ -898,17 +927,40 @@ group), list them here.]
 ## Alternatives considered
 
 [This should include as many alternatives as you can,
-from high level architectural decisions down to alternative naming choices.]
+from high level architectural decisions down to alternative naming choices.
+If you capture your alternatives as Architectural Decision Records,
+use this section to link to the ADRs.]
 
 ### [Alternative 1]
 
-[Describe an alternative which was considered,
-and why you decided against it.
+[Describe an alternative which was considered.
 This alternative may have been part of a prior proposal in the same area,
 or it may be new.
-If you did any research in making this decision, discuss it here.]
+If you did any research in evaluating this alternative, discuss it here.]
+
+#### Pros
+
+<c- k>*</c-> [List]
+
+#### Cons
+
+<c- k>*</c-> [List]
+
+#### Reason for rejection
+
+[Why do you feel the cons outweigh the pros?]
 
 ### [Alternative 2]
+
+#### Pros
+
+<c- k>*</c-> [List]
+
+#### Cons
+
+<c- k>*</c-> [List]
+
+#### Reason for rejection
 
 [You may not have decided about some alternatives.
 Describe them as open questions here, and adjust the description once you make a decision.]
