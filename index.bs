@@ -165,17 +165,17 @@ First, you can structure the alternative as:
 
 Explanation of the alternative design.
 
-#### Pros
+#### Advantages
 
 * List
 
-#### Cons
+#### Disadvantages
 
 * List
 
 #### Reason for rejection
 
-Why do you feel the cons outweigh the pros?
+Why do you feel the disadvantages outweigh the advantages?
 ```
 
 Alternatively, you can collect a set of [Architectural Decision Records](https://adr.github.io/) as files in your repository.
